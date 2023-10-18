@@ -4,7 +4,7 @@ import sys
 
 import requests
 
-API_KEY = os.getenv('API_KEY')
+LOCATEIP_API_KEY = os.getenv('LOCATEIP_API_KEY')
 API_URL = 'http://api.ipstack.com'
 
 parser = argparse.ArgumentParser(
@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(
                     description='Returns the latitude and longitude for an ip address according to ipstack.com')
 parser.add_argument('ip_address')
 args = parser.parse_args()
-r = requests.get(API_URL + "/" + args.ip_address, params={'access_key': API_KEY})
+r = requests.get(API_URL + "/" + args.ip_address, params={'access_key': LOCATEIP_API_KEY})
 
 # All error info prints to stderr (including python/requests exceptions), success prints 'lat long' as values to stdout
 r.raise_for_status()
