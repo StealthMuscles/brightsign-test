@@ -13,7 +13,7 @@ The program should output the latitude and longitude values, space-separated, to
 Dev builds:
 Reqs: python 3.10, pipenv (although the only 3rd party package in use is requests)
 - `pipenv install`
-- `pipenv run python3 locateip.py`
+- `pipenv run python3 locateip.py <ipaddress>`
 
 Notes:
 I was in a bit of a rush, so I would probably wrap this in scripts or use docker-compose before distributing this as an actual command line tool.
