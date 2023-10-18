@@ -1,9 +1,10 @@
 import argparse
+import os
 import sys
 
 import requests
 
-API_KEY = 'df8193be439058914e2da642c5ae3a67'
+API_KEY = os.getenv('API_KEY')
 API_URL = 'http://api.ipstack.com'
 
 parser = argparse.ArgumentParser(
